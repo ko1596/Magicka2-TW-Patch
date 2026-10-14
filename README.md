@@ -19,7 +19,7 @@
 ## 安裝
 
 1. 在 Steam 安裝《Magicka 2》。
-2. 安裝**遊俠網的《魔法對抗2》簡體中文漢化補丁**，確認遊戲能顯示簡體中文。
+2. 安裝**遊俠網的《魔法對抗2》簡體中文漢化補丁**，確認遊戲能顯示簡體中文。補丁可以在 josida 的 [Steam 指南](https://steamcommunity.com/sharedfiles/filedetails/?id=2800301065) 下載，解壓到遊戲根目錄即可。
 3. 到 [Releases](../../releases) 下載 `Magicka2-TW-Patch.exe` 並執行。
 4. 程式會自動找到遊戲位置。勾選要套用的項目，按「套用」。
 
