@@ -8,7 +8,7 @@
 - 本專案的繁體中文譯文，最初是由遊俠的簡體中文譯文經 OpenCC 轉換而來，之後才逐條修改、重新翻譯。尚未手動修改的條目，仍是遊俠譯文的轉換結果。
 - `translation/zh_tw.json` 不包含遊俠的簡體原文，只保存每條原文的雜湊值，用來偵測原文是否變動。
 
-本專案使用的遊俠補丁取自 josida 在 Steam 分享的指南（https://steamcommunity.com/sharedfiles/filedetails/?id=2800301065），一併致謝。
+本專案使用的遊俠補丁取自巴哈姆特 Magicka 板 Ben5762 整理分享的文章（https://forum.gamer.com.tw/C.php?bsn=18481&snA=486）；遊戲 CPU 使用率過高的問題則是在 josida 的 Steam 指南（https://steamcommunity.com/sharedfiles/filedetails/?id=2800301065）中看到的。一併致謝。
 
 感謝遊俠漢化組讓這款遊戲有了中文，沒有他們的成果就沒有這個專案。若遊俠網對本專案有任何疑慮，請透過 Issues 聯絡，我們會配合處理。
 

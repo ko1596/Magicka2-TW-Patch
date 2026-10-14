@@ -1,6 +1,6 @@
 ## 安裝
 
-1. 先安裝遊俠網（ALI213）的《魔法對抗2》簡體中文漢化補丁，確認遊戲能顯示簡體中文。補丁可以在 josida 的 [Steam 指南](https://steamcommunity.com/sharedfiles/filedetails/?id=2800301065) 下載。
+1. 先安裝遊俠網（ALI213）的《魔法對抗2》簡體中文漢化補丁，確認遊戲能顯示簡體中文。補丁可以在巴哈姆特 Magicka 板 Ben5762 的[這篇文章](https://forum.gamer.com.tw/C.php?bsn=18481&snA=486)下載。
 2. 下載下方的 **Magicka2-TW-Patch.exe**。
 3. 關閉遊戲，執行 `Magicka2-TW-Patch.exe`，勾選要套用的項目，按「套用」。
 
