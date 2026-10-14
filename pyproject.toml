@@ -1,6 +1,6 @@
 [project]
 name = "m2tw"
-version = "1.0.0"
+version = "1.0.1"
 description = "Magicka 2 台灣繁體中文化補丁（以遊俠 ALI213 簡體中文漢化為基礎）"
 readme = "README.md"
 license = "MIT"

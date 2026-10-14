@@ -3,7 +3,7 @@
 import sys
 from pathlib import Path
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 # 原始碼執行時是 repo 根目錄；打包成 exe 後是 PyInstaller 解壓出來的暫存資料夾
 ROOT = Path(getattr(sys, "_MEIPASS", Path(__file__).resolve().parents[2]))

@@ -1,4 +1,6 @@
-# 推送 v* 標籤（例如 git tag v1.0.0 && git push --tags）時，自動打包安裝程式並發布到 Releases
+# 推送 v* 標籤（例如 git tag v1.0.1 && git push origin v1.0.1）時，自動打包安裝程式並發布到 Releases。
+# 發布的 exe 會附上 SHA-256 校驗碼與 GitHub 建置來源證明（artifact attestation），
+# 任何人都能驗證這個 exe 是由本 repo 的原始碼在 GitHub 上打包出來的。
 name: Release
 
 on:
@@ -8,6 +10,8 @@ on:
 
 permissions:
   contents: write
+  id-token: write
+  attestations: write
 
 jobs:
   build:
@@ -21,13 +25,35 @@ jobs:
         run: |
           uv sync --group dev
           uv run --group dev scripts/build_exe.py
+      - name: SHA-256
+        id: hash
+        shell: pwsh
+        run: |
+          $h = (Get-FileHash dist/Magicka2-TW-Patch.exe -Algorithm SHA256).Hash.ToLower()
+          "sha256=$h" >> $env:GITHUB_OUTPUT
+          "$h  Magicka2-TW-Patch.exe" | Out-File -Encoding ascii dist/SHA256SUMS.txt
+      - name: Attest build provenance
+        uses: actions/attest-build-provenance@v2
+        with:
+          subject-path: dist/Magicka2-TW-Patch.exe
       - uses: actions/upload-artifact@v4
         with:
           name: Magicka2-TW-Patch
-          path: dist/Magicka2-TW-Patch.exe
+          path: |
+            dist/Magicka2-TW-Patch.exe
+            dist/SHA256SUMS.txt
+      - name: Release notes
+        if: startsWith(github.ref, 'refs/tags/')
+        shell: pwsh
+        run: |
+          $notes = Get-Content .github/release-notes.md -Raw -Encoding utf8
+          $notes = $notes.Replace('{{SHA256}}', '${{ steps.hash.outputs.sha256 }}').Replace('{{REPO}}', '${{ github.repository }}')
+          $notes | Out-File -Encoding utf8 dist/notes.md
       - name: Publish release
         if: startsWith(github.ref, 'refs/tags/')
         uses: softprops/action-gh-release@v2
         with:
-          files: dist/Magicka2-TW-Patch.exe
-          generate_release_notes: true
+          body_path: dist/notes.md
+          files: |
+            dist/Magicka2-TW-Patch.exe
+            dist/SHA256SUMS.txt

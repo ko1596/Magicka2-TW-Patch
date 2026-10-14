@@ -3,13 +3,39 @@
 輸出：dist/Magicka2-TW-Patch.exe
 """
 
+import re
 import sys
 from pathlib import Path
 
 import PyInstaller.__main__
 
 ROOT = Path(__file__).resolve().parents[1]
+BUILD = ROOT / "build"
 sep = ";" if sys.platform == "win32" else ":"
+
+version = re.search(r'__version__ = "([^"]+)"', (ROOT / "src/m2tw/__init__.py").read_text("utf-8")).group(1)
+nums = tuple(int(x) for x in (version.split(".") + ["0"] * 4)[:4])
+
+# Windows 檔案內容裡看得到的版本資訊
+BUILD.mkdir(exist_ok=True)
+version_file = BUILD / "version_info.txt"
+version_file.write_text(f"""VSVersionInfo(
+  ffi=FixedFileInfo(filevers={nums}, prodvers={nums}, mask=0x3f, flags=0x0, OS=0x40004,
+                    fileType=0x1, subtype=0x0, date=(0, 0)),
+  kids=[
+    StringFileInfo([StringTable('040404b0', [
+      StringStruct('CompanyName', 'Magicka2-TW-Patch contributors'),
+      StringStruct('FileDescription', 'Magicka 2 台灣繁體中文化補丁安裝程式'),
+      StringStruct('FileVersion', '{version}'),
+      StringStruct('InternalName', 'Magicka2-TW-Patch'),
+      StringStruct('LegalCopyright', 'MIT License (code). Fan translation based on ALI213. https://github.com/ko1596/Magicka2-TW-Patch'),
+      StringStruct('OriginalFilename', 'Magicka2-TW-Patch.exe'),
+      StringStruct('ProductName', 'Magicka 2 台灣繁體中文化補丁'),
+      StringStruct('ProductVersion', '{version}')])]),
+    VarFileInfo([VarStruct('Translation', [0x0404, 1200])])
+  ]
+)
+""", "utf-8")
 
 PyInstaller.__main__.run([
     str(ROOT / "scripts" / "installer_entry.py"),
@@ -18,6 +44,8 @@ PyInstaller.__main__.run([
     "--windowed",
     "--noconfirm",
     "--clean",
+    "--noupx",
+    "--version-file", str(version_file),
     "--paths", str(ROOT / "src"),
     "--add-data", f"{ROOT / 'translation'}{sep}translation",
     "--add-data", f"{ROOT / 'assets'}{sep}assets",
@@ -26,6 +54,6 @@ PyInstaller.__main__.run([
     "--exclude-module", "PySide6",
     "--exclude-module", "numpy",
     "--distpath", str(ROOT / "dist"),
-    "--workpath", str(ROOT / "build"),
-    "--specpath", str(ROOT / "build"),
+    "--workpath", str(BUILD),
+    "--specpath", str(BUILD),
 ])
