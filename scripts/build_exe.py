@@ -46,8 +46,10 @@ PyInstaller.__main__.run([
     "--clean",
     "--noupx",
     "--version-file", str(version_file),
+    "--icon", str(ROOT / "assets" / "icon.ico"),
     "--paths", str(ROOT / "src"),
-    "--add-data", f"{ROOT / 'translation'}{sep}translation",
+    "--add-data", f"{ROOT / 'translation' / 'zh_tw.json'}{sep}translation",
+    "--add-data", f"{ROOT / 'translation' / 'keys.json'}{sep}translation",
     "--add-data", f"{ROOT / 'assets'}{sep}assets",
     "--collect-data", "opencc",
     # 安裝程式用不到翻譯編輯器的 PySide6

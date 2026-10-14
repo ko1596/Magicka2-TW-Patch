@@ -21,6 +21,7 @@ dev = ["pyinstaller>=6.11"]
 m2tw-installer = "m2tw.gui:main"
 m2tw-convert = "m2tw.translate:main_cli"
 m2tw-editor = "m2tw.translate:main_gui"
+m2tw-crowdin = "m2tw.crowdin:main"
 
 [build-system]
 requires = ["hatchling"]

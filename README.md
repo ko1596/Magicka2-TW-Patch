@@ -45,9 +45,11 @@ Steam 會把遊俠改過的 `PhysX3_x86.dll` 換回原版，中文就會消失�
 - 「獨」這個字在遊戲裡顯示壞掉，所以譯文刻意避開這個字（例如「一角獸」）。
 - 世界地圖上的地名保留英文原美術。
 
-## 參與翻譯
+## 一起來翻譯
 
-發現翻得怪的地方，歡迎到 [Issues](../../issues) 回報，最好附上遊戲截圖和英文原文。想直接參與翻譯，請看 [CONTRIBUTING.md](CONTRIBUTING.md)。
+**👉 [Crowdin 翻譯專案](https://crowdin.com/project/magicka2-tw)**：不用懂程式，用瀏覽器就能提出更好的譯法、為別人的建議投票。
+
+發現翻得怪的地方，也歡迎到 [Issues](../../issues) 回報，最好附上遊戲截圖和英文原文。詳細說明請看 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
 ## 開發文件
 

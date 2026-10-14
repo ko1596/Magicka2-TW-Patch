@@ -1,0 +1,6 @@
+# Crowdin 設定：原文是 translation/i18n/en.json，繁中譯文是 translation/i18n/zh-TW.json
+# 格式為 Chrome JSON（每條的 description 會顯示給譯者當作說明）
+files:
+  - source: /translation/i18n/en.json
+    translation: /translation/i18n/%locale%.json
+    type: chrome

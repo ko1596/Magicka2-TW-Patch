@@ -279,7 +279,7 @@ class Project:
     def save_config(self):
         cfg = {"mode": self.mode, "phrases": self.phrases, "overrides": self.overrides,
                "additions": self.additions, "wrap": self.wrap}
-        self.cfg_path.write_text(json.dumps(cfg, ensure_ascii=False, indent=2), "utf-8")
+        self.cfg_path.write_text(json.dumps(cfg, ensure_ascii=False, indent=2) + "\n", "utf-8")
 
     def auto_convert(self, cc: OpenCC, e: Entry) -> str:
         """回傳不含引擎空格的繁體文字（OpenCC + 詞彙替換表，不含手動修改）。"""

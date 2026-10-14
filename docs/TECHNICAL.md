@@ -9,14 +9,19 @@ src/m2tw/
   translate.py   字典解析、簡轉繁、斷行、寫回 ali213.d12；也包含翻譯編輯器（PySide6）
   patches.py     三項修改（繁中文本、中文標題、CPU 優化）的套用／還原與備份管理
   game.py        尋找 Steam 裡的遊戲、檢查遊俠補丁是否生效
-  gui.py         安裝程式視窗（tkinter）
+  gui.py         安裝程式視窗（tkinter Canvas）
+  art.py         安裝程式的美術：背景合成、面板、勾選框、按鈕（依螢幕縮放比例繪製）
+  crowdin.py     與 Crowdin 交換譯文（m2tw-crowdin export／import）
 translation/
-  zh_tw.json     本專案的譯文與轉換設定（見下方）
+  zh_tw.json     本專案的譯文與轉換設定（見下方），也是安裝程式用的資料
   keys.json      字串 ID → 遊戲內部名稱
-assets/
-  logo_zh.png    中文標題標誌
+  i18n/          給 Crowdin 的 Chrome JSON（en.json 原文、zh-TW.json 譯文），由 m2tw-crowdin 產生
+  crowdin_glossary.csv  由 GLOSSARY.md 產生、可匯入 Crowdin 的詞彙表
+assets/          打包進安裝程式的素材：logo_zh.png、icon.ico、installer_bg.jpg
+art/             原始美術（AI 生成），由 scripts/make_assets.py 轉成 assets/
 scripts/
   build_exe.py   打包安裝程式
+  make_assets.py 由 art/ 產生圖示與背景
 ```
 
 ## 開發環境
@@ -28,6 +33,7 @@ uv sync --extra editor --group dev   # 安裝全部（含編輯器、打包工�
 uv run m2tw-installer                # 執行安裝程式（不打包）
 uv run m2tw-editor                   # 翻譯編輯器
 uv run m2tw-convert                  # 不開視窗，直接重新轉換並寫入遊戲
+uv run m2tw-crowdin export|import    # 與 Crowdin 交換譯文（見 CONTRIBUTING.md）
 uv run --group dev scripts/build_exe.py   # 打包成 dist/Magicka2-TW-Patch.exe
 ```
 
@@ -121,4 +127,4 @@ Bitsquid 引擎依邏輯處理器數量開工作執行緒。執行緒沒工作�
 
 ## 已知限制
 
-見 [DEVLOG.md 的「還沒解決的」](DEVLOG.md#13-還沒解決的)。
+見 [DEVLOG.md 的「還沒解決的」](DEVLOG.md#14-還沒解決的)。
