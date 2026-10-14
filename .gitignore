@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.venv/
+build/
+dist/
+*.spec
+
+# 遊俠與遊戲的檔案不可放進 repo
+*.d12
+*.d12.chs
+*.d02
+ali213.dll
+PhysX3_x86.dll
+Magicka2.exe
+m2tw_backup/

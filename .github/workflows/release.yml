@@ -1,0 +1,33 @@
+# 推送 v* 標籤（例如 git tag v1.0.0 && git push --tags）時，自動打包安裝程式並發布到 Releases
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.13"
+      - name: Build installer
+        run: |
+          uv sync --group dev
+          uv run --group dev scripts/build_exe.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Magicka2-TW-Patch
+          path: dist/Magicka2-TW-Patch.exe
+      - name: Publish release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/Magicka2-TW-Patch.exe
+          generate_release_notes: true
