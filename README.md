@@ -8,6 +8,12 @@
 > 顯示中文的技術（`ali213.dll`、字型圖集）與最初的翻譯都來自遊俠漢化組，在此致上感謝。
 > 本專案不包含、也不散布任何遊俠的檔案，使用前請先自行安裝遊俠的簡體中文補丁。
 
+## 相關連結
+
+- 📖 [巴哈姆特 Magicka 板介紹文章](https://forum.gamer.com.tw/Co.php?bsn=18481&sn=1109)：完整介紹、遊戲畫面、開發路程
+- 📘 [Steam 指南](https://steamcommunity.com/sharedfiles/filedetails/?id=3819755394)：在 Steam 社群也能找到安裝說明與截圖
+- ✎ [Crowdin 翻譯專案](https://crowdin.com/project/magicka2-tw)：一起來翻譯
+
 ## 內容
 
 - **台灣繁體中文文本**：全部約 2700 條字串。

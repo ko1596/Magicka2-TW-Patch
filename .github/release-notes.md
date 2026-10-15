@@ -4,7 +4,7 @@
 2. 下載下方的 **Magicka2-TW-Patch.exe**。
 3. 關閉遊戲，執行 `Magicka2-TW-Patch.exe`，勾選要套用的項目，按「套用」。
 
-詳細說明請看 [README](https://github.com/{{REPO}}#readme)。
+詳細說明請看 [README](https://github.com/{{REPO}}#readme)、[巴哈姆特文章](https://forum.gamer.com.tw/Co.php?bsn=18481&sn=1109)或 [Steam 指南](https://steamcommunity.com/sharedfiles/filedetails/?id=3819755394)。
 
 ## 瀏覽器或 Windows 跳出警告？
 
