@@ -24,11 +24,12 @@ version_file.write_text(f"""VSVersionInfo(
                     fileType=0x1, subtype=0x0, date=(0, 0)),
   kids=[
     StringFileInfo([StringTable('040404b0', [
-      StringStruct('CompanyName', 'Magicka2-TW-Patch contributors'),
+      StringStruct('CompanyName', '凡克 (ko1596)'),
       StringStruct('FileDescription', 'Magicka 2 台灣繁體中文化補丁安裝程式'),
+      StringStruct('Comments', 'https://github.com/ko1596/Magicka2-TW-Patch'),
       StringStruct('FileVersion', '{version}'),
       StringStruct('InternalName', 'Magicka2-TW-Patch'),
-      StringStruct('LegalCopyright', 'MIT License (code). Fan translation based on ALI213. https://github.com/ko1596/Magicka2-TW-Patch'),
+      StringStruct('LegalCopyright', 'Copyright © 2026 凡克 (ko1596). Code: MIT License. Fan translation based on ALI213.'),
       StringStruct('OriginalFilename', 'Magicka2-TW-Patch.exe'),
       StringStruct('ProductName', 'Magicka 2 台灣繁體中文化補丁'),
       StringStruct('ProductVersion', '{version}')])]),
