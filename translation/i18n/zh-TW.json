@@ -208,7 +208,7 @@
     "description": "神器｜ID 048701B3｜joa_ui_artifact_20_name"
   },
   "id_048C62E2": {
-    "message": "2名玩家，香蕉神器組合",
+    "message": "2名玩家，蕉頭爛額神器組合",
     "description": "其他（無內部名稱）｜ID 048C62E2"
   },
   "joa_ui_robe_color_pink": {
@@ -2684,7 +2684,7 @@
     "description": "劇情 第2章-1｜ID 3CCAF577｜joa_2_1_1_training7_trainer2MP｜多人版（對多位玩家說）｜格式代碼（[P=…] [c] #…; [K=…] %s %d）不可增減，%s／%d 順序要和英文一致；不可使用「獨」字。"
   },
   "id_3CD32ECE": {
-    "message": "3名玩家，香蕉神器組合",
+    "message": "3名玩家，蕉頭爛額神器組合",
     "description": "其他（無內部名稱）｜ID 3CD32ECE"
   },
   "id_3CE47ACF": {
@@ -4388,7 +4388,7 @@
     "description": "其他（無內部名稱）｜ID 64E727D0"
   },
   "artifact_difficulty_bananas": {
-    "message": "香蕉",
+    "message": "蕉頭爛額",
     "description": "神器｜ID 64E861B3｜artifact_difficulty_bananas"
   },
   "joa_ui_artifact_19_3": {
@@ -4832,7 +4832,7 @@
     "description": "帳號／連線｜ID 6FA6170B｜joa_ui_login_new_password_bad_password_new"
   },
   "join_game_start_banana": {
-    "message": "香蕉模式，抓狂吧！",
+    "message": "蕉頭爛額，開搞！",
     "description": "帳號／連線｜ID 6FBA1680｜join_game_start_banana"
   },
   "joa_3_2_3_boss_rant3_human": {
@@ -6740,7 +6740,7 @@
     "description": "劇情 第1章-1｜ID 9ECB95F3｜joa_1_1_5_bridge2a_cronie｜格式代碼（[P=…] [c] #…; [K=…] %s %d）不可增減，%s／%d 順序要和英文一致；不可使用「獨」字。"
   },
   "id_9ECEE227": {
-    "message": "1名玩家，香蕉神器組合",
+    "message": "1名玩家，蕉頭爛額神器組合",
     "description": "其他（無內部名稱）｜ID 9ECEE227"
   },
   "joa_3_2_3_boss_rant13_human": {
@@ -7556,7 +7556,7 @@
     "description": "帳號／連線｜ID B19B5C5B｜joa_ui_login_account_info_steam"
   },
   "joa_ui_gamesummary_unlocks_sage": {
-    "message": "神器組合：香蕉",
+    "message": "神器組合：蕉頭爛額",
     "description": "其他介面｜ID B1A1A49C｜joa_ui_gamesummary_unlocks_sage"
   },
   "joa_ui_robe_lok_desc": {
@@ -8460,7 +8460,7 @@
     "description": "劇情 第4章-1｜ID C661802D｜joa_4_1_1_laborcamp08_van｜格式代碼（[P=…] [c] #…; [K=…] %s %d）不可增減，%s／%d 順序要和英文一致；不可使用「獨」字。"
   },
   "id_C668EE12": {
-    "message": "4名玩家，香蕉神器組合",
+    "message": "4名玩家，蕉頭爛額神器組合",
     "description": "其他（無內部名稱）｜ID C668EE12"
   },
   "joa_trial_summary_4_victory": {
@@ -9944,7 +9944,7 @@
     "description": "劇情 第4章-2｜ID E9750380｜joa_4_2_2_poi_dark2"
   },
   "joa_ui_artifacts_tab_sage": {
-    "message": "香蕉",
+    "message": "蕉頭爛額",
     "description": "神器｜ID E97823C6｜joa_ui_artifacts_tab_sage"
   },
   "joa_ui_weapon_lollipop_desc": {
